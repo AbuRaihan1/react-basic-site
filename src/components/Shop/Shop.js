@@ -1,9 +1,24 @@
 import React from "react";
-import './Shop.css'
+import { useLoaderData } from "react-router-dom";
+import Orders from "../Orders/Orders";
+import Products from "../Products/Products";
+import "./Shop.css";
+
 const Shop = () => {
+  const loadProductsData = useLoaderData();
+
   return (
-    <div>
-      <h3>shop Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique aliquid voluptate suscipit quia impedit cumque excepturi esse? Aliquam iusto corporis magni perferendis minus. Voluptatum laudantium animi similique accusamus repellat odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea distinctio iste possimus suscipit. Repellat minus quos, fugiat sint cum consequatur doloremque ipsam voluptate, quo quaerat iste necessitatibus sit illum et.</h3>
+    <div className="all_wrapper">
+      <div className="productsArea">
+        {loadProductsData.map((products) => (
+          <Products products={products} key={products.id}></Products>
+        ))}
+      </div>
+      <div className="order-area">
+        <div>
+            <Orders></Orders>
+        </div>
+      </div>
     </div>
   );
 };

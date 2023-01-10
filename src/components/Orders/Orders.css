@@ -1,0 +1,14 @@
+.orders {
+  background: #1c2b35;
+  color: white;
+  padding: 20px;
+  position: sticky;
+  top: 140px;
+  margin-top: 20px;
+  border-radius: 10px 0;
+}
+.orders h2 {
+  text-align: center;
+  border-bottom: 2px solid white;
+   padding-bottom: 5px;
+}
